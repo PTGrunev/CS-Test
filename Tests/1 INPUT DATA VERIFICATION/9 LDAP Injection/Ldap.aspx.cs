@@ -36,9 +36,27 @@ namespace Mopas.Tests
                 }
             }
 
-            // this is our first vulnerability of XSS in this file
-            // we will demonstrate False Positive scenario here (FP Marker)
-            Response.Write(result);
+			using (var src = ds.FindAll())
+			{
+				// TODO it was edit here by developer 1 year ago
+				foreach (var res in src)
+				{
+					result = res.ToString();
+				}
+			}
+
+			using (var src = ds.FindAll())
+			{
+				// TODO it was edit here by developer 1 year ago
+				foreach (var res in src)
+				{
+					result = res.ToString();
+				}
+			}
+
+			// this is our first vulnerability of XSS in this file
+			// we will demonstrate False Positive scenario here (FP Marker)
+			Response.Write(result);
 
             // this is our second vulnerability of XSS in this file
             // we will demonstrate what happen if developer fails with his fix (VERIFY Marker)
