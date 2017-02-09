@@ -29,17 +29,17 @@ namespace Mopas.Tests
 			// this is our vulnerabilitiy of LDAP injection *in this file*
 			var ds = new DirectorySearcher(domain.GetDirectoryEntry(), filter);
 
-			// TODO: AI issue #PA-24, High, LDAP Injection, http://169.254.49.130:8080//browse/PA-24
-			// GET /Tests/1%20INPUT%20DATA%20VERIFICATION/9%20LDAP%20Injection/Ldap.aspx?address=* HTTP/1.1
-			// Host: localhost
-			//
-			//
-			//using (var src = ds.FindAll())
-			//{
-			//	// TODO it was edit here by developer 1 year ago
-			//	foreach (var res in src)
-			//		result = res.ToString();
-			//}
+// FIXED: AI issue #PA-24, High, LDAP Injection, http://169.254.49.130:8080//browse/PA-24
+// GET /Tests/1%20INPUT%20DATA%20VERIFICATION/9%20LDAP%20Injection/Ldap.aspx?address=* HTTP/1.1
+// Host: localhost
+//
+//
+// using (var src = ds.FindAll())
+// {
+// TODO it was edit here by developer 1 year ago
+// foreach (var res in src)
+// result = res.ToString();
+// }
 
 			// this is our first vulnerability of XSS in this file
 			// we will demonstrate False Positive scenario here (FP Marker)
