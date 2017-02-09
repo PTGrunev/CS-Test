@@ -34,12 +34,12 @@ namespace Mopas.Tests
 			// Host: localhost
 			//
 			//
-			using (var src = ds.FindAll())
-			{
-				// TODO it was edit here by developer 1 year ago
-				foreach (var res in src)
-					result = res.ToString();
-			}
+			//using (var src = ds.FindAll())
+			//{
+			//	// TODO it was edit here by developer 1 year ago
+			//	foreach (var res in src)
+			//		result = res.ToString();
+			//}
 
 			// this is our first vulnerability of XSS in this file
 			// we will demonstrate False Positive scenario here (FP Marker)
