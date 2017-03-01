@@ -36,6 +36,8 @@ namespace Mopas.Tests
 			//
 			// TODO: AI issue #2, High, LDAP Injection, https://github.com/PTGrunev/CS-Test/issues/2
 			// (Mopas.Tests.Ldap.Request.Params["address"] == "*")
+			// TODO: AI issue #, High, LDAP Injection,
+			// (Mopas.Tests.Ldap.Request.Params["address"] == "*")
 			using (var src = ds.FindAll())
 			{
 				// TODO it was edit here by developer 1 year ago
